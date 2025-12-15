@@ -15,10 +15,10 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#home' },
-    { name: 'Sobre mí', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Curriculum', href: '#curriculum' },
+    { name: 'Sobre mí', href: '#about' },
     { name: 'Contacto', href: '#contact' },
   ];
 
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium transition-colors hover:text-primary-300 text-white bg-[rgb(30,58,138)] px-2 py-1 rounded"
+                className="btn-pulse"
               >
                 {link.name}
               </a>
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-base font-medium transition-colors hover:text-primary-300 text-white bg-[rgb(30,58,138)] px-2 py-1 rounded"
+                className="btn-pulse"
               >
                 {link.name}
               </a>

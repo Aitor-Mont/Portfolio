@@ -1,0 +1,44 @@
+# Docker Compose - Orquestación de servicios
+#
+# Docker Compose nos permite definir y ejecutar múltiples contenedores
+# con un solo comando. En este caso: backend + MongoDB
+
+services:
+  # ============================================
+  # Servicio: Backend (Node.js + Express)
+  # ============================================
+  backend:
+    build: ./backend # Construir desde el Dockerfile en ./backend
+    container_name: portfolio-backend
+    ports:
+      - "3001:3001" # Mapear puerto 3001 del contenedor al host
+    environment:
+      - PORT=3001
+      - MONGODB_URI=mongodb://mongodb:27017/portfolio
+      - EMAIL_USER=${EMAIL_USER} # Se toma del archivo .env
+      - EMAIL_PASS=${EMAIL_PASS}
+      - EMAIL_TO=${EMAIL_TO}
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:5173}
+    depends_on:
+      - mongodb # Esperar a que MongoDB esté listo
+    restart: unless-stopped # Reiniciar si falla
+
+  # ============================================
+  # Servicio: MongoDB
+  # ============================================
+  mongodb:
+    image: mongo:7 # Usar imagen oficial de MongoDB 7
+    container_name: portfolio-mongodb
+    ports:
+      - "27017:27017" # Mapear puerto de MongoDB
+    volumes:
+      - mongodb_data:/data/db # Volumen persistente para los datos
+    restart: unless-stopped
+
+# ============================================
+# Volúmenes
+# ============================================
+# Los volúmenes permiten que los datos persistan aunque
+# detengas o elimines el contenedor
+volumes:
+  mongodb_data:

@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
+
+// URL de la API del backend
+// En desarrollo: http://localhost:3001
+// En producción: cambia esto a la URL de tu backend desplegado
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,6 +18,8 @@ const Contact: React.FC = () => {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [serverError, setServerError] = useState('');
 
   const validateForm = () => {
     let isValid = true;
@@ -32,21 +39,46 @@ const Contact: React.FC = () => {
     return isValid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setServerError('');
 
-    if (validateForm()) {
-      const subject = encodeURIComponent("SOLICITUD DE CONTACTO");
-      const body = encodeURIComponent(`Nombre/Empresa: ${formData.name}\n\nMensaje:\n${formData.message}`);
-      window.location.href = `mailto:aitormon@gmail.com?subject=${subject}&body=${body}`;
+    if (!validateForm()) {
+      return;
+    }
 
-      // Optional: Clear form after "sending" (opening mail client)
-      setFormData({ name: '', message: '' });
-      setErrors({ name: '', message: '' });
+    setIsLoading(true);
 
-      // Show success tooltip
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 3000);
+    try {
+      const response = await fetch(`${API_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          message: formData.message.trim()
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        // Éxito: limpiar formulario y mostrar mensaje
+        setFormData({ name: '', message: '' });
+        setErrors({ name: '', message: '' });
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 5000);
+      } else {
+        // Error del servidor
+        setServerError(data.error || 'Error al enviar el mensaje. Inténtalo de nuevo.');
+      }
+    } catch (error) {
+      // Error de red o conexión
+      console.error('Error de red:', error);
+      setServerError('No se pudo conectar con el servidor. Verifica tu conexión.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -57,6 +89,10 @@ const Contact: React.FC = () => {
     // Clear error when user types
     if (errors[name as keyof typeof errors]) {
       setErrors({ ...errors, [name]: '' });
+    }
+    // Clear server error when user starts typing again
+    if (serverError) {
+      setServerError('');
     }
   };
 
@@ -174,12 +210,33 @@ const Contact: React.FC = () => {
                 )}
               </div>
 
+              {/* Mensaje de error del servidor */}
+              {serverError && (
+                <div className="p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 text-sm flex items-center gap-2">
+                  <AlertCircle size={18} />
+                  {serverError}
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-lg shadow-lg hover:shadow-primary-500/25 transition-all transform hover:-translate-y-1"
+                disabled={isLoading}
+                className={`w-full flex items-center justify-center gap-2 px-8 py-4 font-bold rounded-lg shadow-lg transition-all transform ${isLoading
+                    ? 'bg-primary-700 cursor-not-allowed'
+                    : 'bg-primary-600 hover:bg-primary-500 hover:shadow-primary-500/25 hover:-translate-y-1'
+                  } text-white`}
               >
-                <Send size={20} />
-                Enviar Mensaje
+                {isLoading ? (
+                  <>
+                    <Loader2 size={20} className="animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <Send size={20} />
+                    Enviar Mensaje
+                  </>
+                )}
               </button>
             </form>
           </div>

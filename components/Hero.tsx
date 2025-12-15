@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
               Full Stack Web Developer
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium text-primary-100 bg-white/10 p-4 rounded-xl backdrop-blur-sm mb-12">
-              <span>Paginas Web</span>
+            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium text-primary-100 bg-white/10 p-4 rounded-xl backdrop-blur-sm mb-4">
+              <span>Web Platforms</span>
               <span className="text-primary-400">•</span>
               <span>Web Apps</span>
               <span className="text-primary-400">•</span>
@@ -34,11 +34,23 @@ const Hero: React.FC = () => {
               <span>Desktop Apps</span>
             </div>
 
+            <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium text-primary-100 bg-white/10 p-4 rounded-xl backdrop-blur-sm mb-12">
+              <span>Javascript</span>
+              <span className="text-primary-400">•</span>
+              <span>React</span>
+              <span className="text-primary-400">•</span>
+              <span>Node.js</span>
+              <span className="text-primary-400">•</span>
+              <span>Java</span>
+              <span className="text-primary-400">•</span>
+              <span>Spring Boot</span>
+            </div>
+
             <a
-              href="#about"
+              href="#contact"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-primary-700 bg-white hover:bg-primary-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Conóceme
+              Contacto
             </a>
           </div>
         </div>

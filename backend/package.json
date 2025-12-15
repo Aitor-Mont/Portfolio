@@ -1,0 +1,20 @@
+{
+    "name": "portfolio-backend",
+    "version": "1.0.0",
+    "description": "Backend API para el formulario de contacto del portfolio",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "node --watch src/index.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "mongoose": "^8.0.0",
+        "nodemailer": "^6.9.7"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

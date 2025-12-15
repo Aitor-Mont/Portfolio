@@ -63,13 +63,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpen }) => {
 
         {project.technologies && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.technologies.slice(0, 3).map((tech, idx) => (
+            {project.technologies.slice(0, 5).map((tech, idx) => (
               <span key={idx} className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded-full">
                 {tech}
               </span>
             ))}
-            {project.technologies.length > 3 && (
-              <span className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded-full">+{project.technologies.length - 3}</span>
+            {project.technologies.length > 5 && (
+              <span className="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded-full">+{project.technologies.length - 5}</span>
             )}
           </div>
         )}
@@ -202,11 +202,23 @@ const Portfolio: React.FC = () => {
 
   const projects: Project[] = [
     {
+      id: 3,
+      title: "Dashboard Analítico Financiero",
+      description: "Visualización de datos en tiempo real consumiendo API REST y mostrando gráficas interactivas.",
+      longDescription: "Dashboard interactivo para visualización de métricas empresariales clave (KPIs). Consume datos de múltiples fuentes a través de APIs REST y los presenta en gráficos dinámicos y tablas filtrables. Optimizado para rendimiento con grandes volúmenes de datos.",
+      technologies: ["React", "D3.js", "Java", "Spring Boot", "PostgreSQL"],
+      images: [
+        "/archivos/Prisma.jpeg",
+        "/archivos/prisma2.jpg"
+      ],
+      repoUrl: "https://github.com/Aitor-Mont"
+    },
+    {
       id: 1,
       title: "E-Commerce Full Stack",
       description: "Plataforma de comercio electrónico con carrito, pasarela de pago y panel de administración.",
       longDescription: "Una solución completa de comercio electrónico desarrollada desde cero. Incluye gestión de inventario en tiempo real, procesamiento de pagos seguro con Stripe, y un panel de administración intuitivo para gestionar productos y pedidos. La arquitectura asegura escalabilidad y rendimiento.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API", "Redux"],
+      technologies: ["React", "Node", "Express", "MongoDB"],
       images: [
         "/archivos/gameflow.jpg",
         "/archivos/gameflow2.jpeg"
@@ -217,24 +229,12 @@ const Portfolio: React.FC = () => {
     {
       id: 2,
       title: "Gestor de Tareas Corporativo",
-      description: "Aplicación tipo Kanban para gestión de proyectos internos con autenticación y roles.",
+      description: "Aplicación para móviles tipo Kanban para gestión de proyectos internos con autenticación y roles.",
       longDescription: "Sistema de gestión de proyectos basado en metodología Kanban. Permite a los equipos colaborar en tiempo real, asignar tareas, establecer fechas límite y visualizar el progreso mediante gráficos. Implementa autenticación segura y gestión de roles de usuario.",
-      technologies: ["Angular", ".NET Core", "SQL Server", "SignalR", "Azure AD"],
+      technologies: ["React", ".Net Core", "OAuth 2.0", "PostgreSQL"],
       images: [
         "/archivos/Kinetic.png",
         "/archivos/kinetic2.png"
-      ],
-      repoUrl: "https://github.com/Aitor-Mont"
-    },
-    {
-      id: 3,
-      title: "Dashboard Analítico",
-      description: "Visualización de datos en tiempo real consumiendo API REST y mostrando gráficas interactivas.",
-      longDescription: "Dashboard interactivo para visualización de métricas empresariales clave (KPIs). Consume datos de múltiples fuentes a través de APIs REST y los presenta en gráficos dinámicos y tablas filtrables. Optimizado para rendimiento con grandes volúmenes de datos.",
-      technologies: ["React", "D3.js", "Python", "Flask", "PostgreSQL", "Docker"],
-      images: [
-        "/archivos/Prisma.jpeg",
-        "/archivos/prisma2.jpg"
       ],
       repoUrl: "https://github.com/Aitor-Mont"
     }

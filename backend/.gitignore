@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno (NUNCA subir a git)
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
