@@ -1,32 +1,27 @@
 import React from 'react';
-import { Layout, Server, Database, Wrench, Code } from 'lucide-react';
+import { Layout, Server, Database, Wrench } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
     {
       title: "Frontend",
       icon: <Layout className="w-6 h-6 text-blue-500" />,
-      skills: ["React", "Angular", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind"]
+      skills: ["React", "Bootstrap", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind"]
     },
     {
       title: "Backend",
       icon: <Server className="w-6 h-6 text-green-500" />,
-      skills: ["Node.js", "Java + Spring", ".NET Core", "C#", "Express"]
+      skills: ["Node.js", "Java", "Spring Boot", ".NET Core", "C#", "Express"]
     },
     {
       title: "Bases de Datos",
       icon: <Database className="w-6 h-6 text-purple-500" />,
-      skills: ["MongoDB", "SQL Server", "MySQL", "PostgreSQL"]
+      skills: ["MongoDB", "PostgreSQL"]
     },
     {
       title: "DevOps & Herramientas",
       icon: <Wrench className="w-6 h-6 text-orange-500" />,
-      skills: ["Docker", "Git / GitHub", "Scrum", "Jira", "Postman"]
-    },
-    {
-      title: "Otros Lenguajes",
-      icon: <Code className="w-6 h-6 text-red-500" />,
-      skills: ["Python", "Visual Basic", "TypeScript"]
+      skills: ["Docker", "Git / GitHub", "Kanban", "Jira"]
     }
   ];
 
