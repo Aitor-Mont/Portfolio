@@ -229,7 +229,7 @@ const Portfolio: React.FC = () => {
     {
       id: 2,
       title: "Gestor de Tareas Corporativo",
-      description: "Aplicación para móviles tipo Kanban para gestión de proyectos internos con autenticación y roles.",
+      description: "Aplicación responsive tipo Kanban para gestión de proyectos internos con autenticación y roles.",
       longDescription: "Sistema de gestión de proyectos basado en metodología Kanban. Permite a los equipos colaborar en tiempo real, asignar tareas, establecer fechas límite y visualizar el progreso mediante gráficos. Implementa autenticación segura y gestión de roles de usuario.",
       technologies: ["React", ".Net Core", "OAuth 2.0", "PostgreSQL"],
       images: [
