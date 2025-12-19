@@ -6,7 +6,7 @@ const Skills: React.FC = () => {
     {
       title: "Frontend",
       icon: <Layout className="w-6 h-6 text-blue-500" />,
-      skills: ["React", "Bootstrap", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind"]
+      skills: ["Angular", "React", "Bootstrap", "JavaScript (ES6+)"]
     },
     {
       title: "Backend",
@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
     {
       title: "Bases de Datos",
       icon: <Database className="w-6 h-6 text-purple-500" />,
-      skills: ["MongoDB", "PostgreSQL"]
+      skills: ["MongoDB", "PostgreSQL", "MySQL"]
     },
     {
       title: "DevOps & Herramientas",

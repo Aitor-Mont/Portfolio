@@ -35,11 +35,9 @@ const Hero: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base font-medium text-primary-100 bg-white/10 p-4 rounded-xl backdrop-blur-sm mb-12">
-              <span>Javascript</span>
+              <span>Angular</span>
               <span className="text-primary-400">•</span>
               <span>React</span>
-              <span className="text-primary-400">•</span>
-              <span>Node.js</span>
               <span className="text-primary-400">•</span>
               <span>Java</span>
               <span className="text-primary-400">•</span>

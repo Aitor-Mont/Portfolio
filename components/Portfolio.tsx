@@ -206,7 +206,7 @@ const Portfolio: React.FC = () => {
       title: "Dashboard Analítico Financiero",
       description: "Visualización de datos en tiempo real consumiendo API REST y mostrando gráficas interactivas.",
       longDescription: "Dashboard interactivo para visualización de métricas empresariales clave (KPIs). Consume datos de múltiples fuentes a través de APIs REST y los presenta en gráficos dinámicos y tablas filtrables. Optimizado para rendimiento con grandes volúmenes de datos.",
-      technologies: ["React", "D3.js", "Java", "Spring Boot", "PostgreSQL"],
+      technologies: ["Angular", "D3.js", "Java", "Spring Boot", "PostgreSQL"],
       images: [
         "/archivos/Prisma.jpeg",
         "/archivos/prisma2.jpg"
@@ -231,7 +231,7 @@ const Portfolio: React.FC = () => {
       title: "Gestor de Tareas Corporativo",
       description: "Aplicación responsive tipo Kanban para gestión de proyectos internos con autenticación y roles.",
       longDescription: "Sistema de gestión de proyectos basado en metodología Kanban. Permite a los equipos colaborar en tiempo real, asignar tareas, establecer fechas límite y visualizar el progreso mediante gráficos. Implementa autenticación segura y gestión de roles de usuario.",
-      technologies: ["React", ".Net Core", "OAuth 2.0", "PostgreSQL"],
+      technologies: ["Angular", ".Net Core", "OAuth 2.0", "PostgreSQL"],
       images: [
         "/archivos/Kinetic.png",
         "/archivos/kinetic2.png"
