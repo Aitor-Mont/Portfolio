@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle, Loader2 } from 'lu
 // URL de la API del backend
 // En desarrollo: http://localhost:3001
 // En producción: cambia esto a la URL de tu backend desplegado
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = import.meta.env.VITE_API_URL || 'https://aitor-montalban-portfolio.up.railway.app';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -222,8 +222,8 @@ const Contact: React.FC = () => {
                 type="submit"
                 disabled={isLoading}
                 className={`w-full flex items-center justify-center gap-2 px-8 py-4 font-bold rounded-lg shadow-lg transition-all transform ${isLoading
-                    ? 'bg-primary-700 cursor-not-allowed'
-                    : 'bg-primary-600 hover:bg-primary-500 hover:shadow-primary-500/25 hover:-translate-y-1'
+                  ? 'bg-primary-700 cursor-not-allowed'
+                  : 'bg-primary-600 hover:bg-primary-500 hover:shadow-primary-500/25 hover:-translate-y-1'
                   } text-white`}
               >
                 {isLoading ? (
