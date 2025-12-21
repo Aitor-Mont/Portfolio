@@ -214,6 +214,18 @@ const Portfolio: React.FC = () => {
       repoUrl: "https://github.com/Aitor-Mont"
     },
     {
+      id: 2,
+      title: "Gestor de Tareas Corporativo",
+      description: "Aplicación responsive tipo Kanban para gestión de proyectos internos con autenticación y roles.",
+      longDescription: "Sistema de gestión de proyectos basado en metodología Kanban. Permite a los equipos colaborar en tiempo real, asignar tareas, establecer fechas límite y visualizar el progreso mediante gráficos. Implementa autenticación segura y gestión de roles de usuario.",
+      technologies: ["Angular", ".Net Core", "OAuth 2.0", "PostgreSQL"],
+      images: [
+        "/archivos/Kinetic.png",
+        "/archivos/kinetic2.png"
+      ],
+      repoUrl: "https://github.com/Aitor-Mont"
+    },
+    {
       id: 1,
       title: "E-Commerce Full Stack",
       description: "Plataforma de comercio electrónico con carrito, pasarela de pago y panel de administración.",
@@ -225,18 +237,6 @@ const Portfolio: React.FC = () => {
       ],
       repoUrl: "https://github.com/Aitor-Mont",
       demoUrl: "https://example.com"
-    },
-    {
-      id: 2,
-      title: "Gestor de Tareas Corporativo",
-      description: "Aplicación responsive tipo Kanban para gestión de proyectos internos con autenticación y roles.",
-      longDescription: "Sistema de gestión de proyectos basado en metodología Kanban. Permite a los equipos colaborar en tiempo real, asignar tareas, establecer fechas límite y visualizar el progreso mediante gráficos. Implementa autenticación segura y gestión de roles de usuario.",
-      technologies: ["Angular", ".Net Core", "OAuth 2.0", "PostgreSQL"],
-      images: [
-        "/archivos/Kinetic.png",
-        "/archivos/kinetic2.png"
-      ],
-      repoUrl: "https://github.com/Aitor-Mont"
     }
   ];
 
