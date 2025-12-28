@@ -12,6 +12,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 
 // Importar las rutas
 const contactRoutes = require('./routes/contact');
@@ -93,6 +94,22 @@ app.get('/', (req, res) => {
 
 // Montar las rutas de contacto en /api/contact
 app.use('/api/contact', contactRoutes);
+
+// ============================================
+// SERVIR FRONTEND (PRODUCCIÓN)
+// ============================================
+
+// Servir archivos estáticos del frontend
+app.use(express.static(path.join(__dirname, '../../dist')));
+
+// Manejar rutas del cliente (SPA) - Cualquier ruta no API devuelve index.html
+app.get('*', (req, res, next) => {
+    // Si la petición es a /api/, pasamos al siguiente middleware (404)
+    if (req.path.startsWith('/api')) {
+        return next();
+    }
+    res.sendFile(path.join(__dirname, '../../dist/index.html'));
+});
 
 // ============================================
 // MANEJO DE ERRORES

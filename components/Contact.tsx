@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle, Loader2 } from 'lu
 // URL de la API del backend
 // En desarrollo: http://localhost:3001
 // En producción: cambia esto a la URL de tu backend desplegado
-const API_URL = import.meta.env.VITE_API_URL || 'https://aitor-montalban-portfolio.up.railway.app';
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
