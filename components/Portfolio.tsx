@@ -28,7 +28,7 @@ const Portfolio: React.FC = () => {
       img: '/archivos/Prisma.png',
       images: ['/archivos/Prisma.png', '/archivos/prisma2.png'],
       demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/Aitor-Mont'
     },
     {
       category: 'Productividad',
@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
       img: '/archivos/Kinetic.png',
       images: ['/archivos/Kinetic.png', '/archivos/kinetic2.png'],
       demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/Aitor-Mont'
     },
     {
       category: 'E-Commerce',
@@ -50,7 +50,7 @@ const Portfolio: React.FC = () => {
       img: '/archivos/gameflow.png',
       images: ['/archivos/gameflow.png', '/archivos/gameflow2.png'],
       demoUrl: '#',
-      repoUrl: '#'
+      repoUrl: 'https://github.com/Aitor-Mont'
     }
   ];
 
@@ -321,9 +321,11 @@ const Portfolio: React.FC = () => {
                   {selectedProject.repoUrl && (
                     <a
                       href={selectedProject.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 h-14 bg-background-dark border border-slate-700 hover:bg-slate-800 transition-all rounded-xl font-black text-white"
                     >
-                      <span className="material-symbols-outlined">code</span>
+                      <i className="fa-brands fa-github text-xl"></i>
                       Ver Repositorio
                     </a>
                   )}
