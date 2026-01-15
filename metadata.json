@@ -1,0 +1,8 @@
+{
+  "name": "Aitor Montalbán Portfolio",
+  "description": "A high-performance professional portfolio for a Full Stack Web Developer featuring skills, academic trajectory, and featured projects.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
