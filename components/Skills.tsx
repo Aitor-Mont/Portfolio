@@ -1,43 +1,45 @@
-
 import React from 'react';
 
 const Skills: React.FC = () => {
   const skillGroups = [
     {
-      title: 'Frontend',
+      title: 'FRONTEND',
       desc: 'Interfaces modernas y reactivas',
-      icon: 'desktop_windows',
-      items: [
-        { name: 'Angular', level: '90%', color: '#dd0031' },
-        { name: 'TypeScript', level: '95%', color: '#3178c6' },
-        { name: 'Tailwind CSS', level: '85%', color: '#38bdf8' }
+      skills: [
+        { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Angular', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg' },
+        { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+        { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' }
       ]
     },
     {
-      title: 'Backend',
+      title: 'BACKEND',
       desc: 'Lógica de servidor robusta',
-      icon: 'terminal',
-      items: [
-        { name: 'Java + Spring', level: '85%', color: '#f89820' },
-        { name: 'Node.js', level: '80%', color: '#68a063' },
-        { name: 'Express', level: '75%', color: '#ffffff' }
+      skills: [
+        { name: 'Java + Spring', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+        { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Express', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', invert: true }
       ]
     },
     {
-      title: 'Bases de Datos',
+      title: 'BASES DE DATOS',
       desc: 'Almacenamiento y optimización',
-      icon: 'storage',
-      items: [
-        { name: 'MongoDB', level: '85%', color: '#4db33d' },
-        { name: 'MySQL', level: '80%', color: '#00758f' },
-        { name: 'PostgreSQL', level: '80%', color: '#336791' }
+      skills: [
+        { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
+        { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+        { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' }
       ]
     },
     {
-      title: 'DevOps & Tools',
+      title: 'DEVOPS & TOOLS',
       desc: 'CI/CD y Metodologías ágiles',
-      icon: 'all_inclusive',
-      chips: ['Docker', 'Git / GitHub', 'Scrum', 'Kanban', 'Jira']
+      skills: [
+        { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+        { name: 'Git / GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', invert: true },
+        { name: 'Scrum', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/confluence/confluence-original.svg' },
+        { name: 'Kanban', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg' },
+        { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg' }
+      ]
     }
   ];
 
@@ -52,45 +54,33 @@ const Skills: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* 2x2 Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skillGroups.map((group) => (
-            <div key={group.title} className="group relative overflow-hidden rounded-2xl border border-slate-800 bg-surface-dark p-8 transition-all hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5">
-              <div className="flex items-center gap-5 border-b border-slate-800 pb-6 mb-8">
-                <div className="p-3.5 rounded-xl bg-primary/10 text-primary">
-                  <span className="material-symbols-outlined text-[32px]">{group.icon}</span>
-                </div>
-                <div>
-                  <h4 className="text-2xl font-bold text-white">{group.title}</h4>
-                  <p className="text-sm text-[#9da9b8]">{group.desc}</p>
-                </div>
+            <div
+              key={group.title}
+              className="relative overflow-hidden rounded-xl border border-slate-700/50 bg-[#1c242f] p-6 md:p-8 transition-all hover:border-slate-600"
+            >
+              {/* Card Header */}
+              <div className="mb-8">
+                <h4 className="text-white font-bold text-lg tracking-wide">
+                  {group.title}: <span className="font-normal text-[#9da9b8]">{group.desc}</span>
+                </h4>
               </div>
 
-              {group.items ? (
-                <div className="space-y-6">
-                  {group.items.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-bold text-sm text-white">{skill.name}</span>
-                        <span className="text-xs text-[#9da9b8] font-medium">{skill.level}</span>
-                      </div>
-                      <div className="w-full bg-background-dark h-2 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full transition-all duration-1000" 
-                          style={{ width: skill.level, backgroundColor: skill.color }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="flex flex-wrap gap-2.5">
-                  {group.chips?.map((chip) => (
-                    <span key={chip} className="px-4 py-2 rounded-full bg-background-dark border border-slate-800 text-sm font-bold text-[#9da9b8] hover:text-primary hover:border-primary transition-colors cursor-default">
-                      {chip}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {/* Skills Icons */}
+              <div className="flex flex-wrap items-end gap-6 md:gap-10">
+                {group.skills.map((skill) => (
+                  <div key={skill.name} className="flex flex-col items-center gap-3">
+                    <img
+                      src={skill.icon}
+                      alt={skill.name}
+                      className={`w-12 h-12 md:w-14 md:h-14 object-contain ${skill.invert ? 'invert' : ''}`}
+                    />
+                    <span className="text-[#9da9b8] text-sm text-center whitespace-nowrap">{skill.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
