@@ -24,7 +24,7 @@ const Portfolio: React.FC = () => {
       title: 'Dashboard Analítico Financiero "Prisma"',
       desc: 'Plataforma para visualización de datos financieros en tiempo real con gráficos interactivos y reportes automatizados.',
       longDesc: 'Este proyecto fue desarrollado para una firma de inversión líder. Permite a los analistas realizar seguimientos exhaustivos de carteras, con integración de APIs de mercado en tiempo real. Implementamos WebSockets para actualizaciones vivas y una arquitectura de microservicios en el backend para manejar grandes volúmenes de transacciones con latencia mínima. La interfaz utiliza D3.js para visualizaciones complejas y Angular para una gestión de estado eficiente.',
-      stack: ['Angular', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
+      stack: ['Angular', 'TypeScript', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
       img: '/archivos/Prisma.png',
       images: ['/archivos/Prisma.png', '/archivos/prisma2.png'],
       demoUrl: '#',
@@ -35,7 +35,7 @@ const Portfolio: React.FC = () => {
       title: 'Gestor de Tareas Corporativo "Kinetic"',
       desc: 'Sistema de gestión de proyectos y tareas con metodología Kanban, asignación de recursos y seguimiento en tiempo real.',
       longDesc: 'Kinetic es una solución empresarial completa para la gestión de proyectos y equipos. Incluye tableros Kanban personalizables, gestión de sprints, asignación automática de recursos basada en disponibilidad y carga de trabajo, y un sistema de notificaciones en tiempo real. La plataforma integra análisis predictivo para estimar tiempos de finalización y detectar cuellos de botella antes de que impacten en los plazos. Desarrollado con Angular para el frontend y Spring Boot con arquitectura de microservicios en el backend.',
-      stack: ['Angular', 'TypeScript', 'Spring Boot', 'MySQL', 'Redis', 'Docker'],
+      stack: ['Angular', 'TypeScript', 'Spring Boot', 'Java', 'PostgreSQL', 'Redis'],
       img: '/archivos/Kinetic.png',
       images: ['/archivos/Kinetic.png', '/archivos/kinetic2.png'],
       demoUrl: '#',
@@ -135,7 +135,7 @@ const Portfolio: React.FC = () => {
                 <h3 className="text-3xl md:text-4xl font-black text-white leading-tight group-hover/item:text-primary transition-colors duration-300">{project.title}</h3>
                 <p className="text-[#9da9b8] text-lg leading-relaxed">{project.desc}</p>
                 <div className="flex flex-wrap gap-2">
-                  {project.stack.slice(0, 4).map(tech => (
+                  {project.stack.map(tech => (
                     <span key={tech} className="px-4 py-2 bg-primary/5 border border-primary/20 rounded-full text-xs font-bold text-primary transition-all duration-300 hover:bg-primary hover:text-white cursor-default">
                       {tech}
                     </span>
