@@ -21,14 +21,14 @@ const Portfolio: React.FC = () => {
   const projects: Project[] = [
     {
       category: 'Fintech',
-      title: 'Dashboard Analítico Financiero "Prisma"',
+      title: 'Dashboard Analítico Financiero "Dashcapital"',
       desc: 'Plataforma para visualización de datos financieros en tiempo real con gráficos interactivos y reportes automatizados.',
       longDesc: 'Este proyecto fue desarrollado para una firma de inversión líder. Permite a los analistas realizar seguimientos exhaustivos de carteras, con integración de APIs de mercado en tiempo real. Implementamos WebSockets para actualizaciones vivas y una arquitectura de microservicios en el backend para manejar grandes volúmenes de transacciones con latencia mínima. La interfaz utiliza D3.js para visualizaciones complejas y Angular para una gestión de estado eficiente.',
       stack: ['Angular', 'TypeScript', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
-      img: '/archivos/Prisma.png',
-      images: ['/archivos/Prisma.png', '/archivos/prisma2.png'],
+      img: '/archivos/dash1.png',
+      images: ['/archivos/dash1.png', '/archivos/dash2.png', '/archivos/dash3.png', '/archivos/dash4.png'],
       demoUrl: '#',
-      repoUrl: 'https://github.com/Aitor-Mont/Prisma'
+      repoUrl: 'https://github.com/Aitor-Mont/Dashcapital'
     },
     {
       category: 'Productividad',
@@ -44,12 +44,12 @@ const Portfolio: React.FC = () => {
     {
       category: 'E-Commerce',
       title: 'E-Commerce Full Stack "Gameflow"',
-      desc: 'Tienda de videojuegos digitales con pasarela de pagos segura, gestión de inventario y panel de administración.',
+      desc: 'Tienda de gaming y streaming con pasarela de pagos segura, gestión de inventario y panel de administración.',
       longDesc: 'Una solución integral de comercio electrónico diseñada específicamente para el mercado de gaming. Incluye un motor de búsqueda avanzado con filtros dinámicos, un sistema de perfiles de usuario con historial de compras, y una integración completa con Stripe para pagos seguros. El panel de administración permite la gestión total del inventario, carga de claves digitales y analíticas de ventas detalladas por región. Utiliza una arquitectura MERN escalable con autenticación JWT.',
       stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API', 'JWT'],
       img: '/archivos/gameflow.png',
       images: ['/archivos/gameflow.png', '/archivos/gameflow2.png'],
-      demoUrl: '#',
+      demoUrl: 'https://gameflow-b325f.web.app',
       repoUrl: 'https://github.com/Aitor-Mont/GameFlow'
     }
   ];
