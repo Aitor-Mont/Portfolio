@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
       stack: ['Angular', 'TypeScript', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
       img: '/archivos/dash1.png',
       images: ['/archivos/dash1.png', '/archivos/dash2.png', '/archivos/dash3.png', '/archivos/dash4.png'],
-      demoUrl: '#',
+      demoUrl: 'https://dashcapital-fc9cf.web.app',
       repoUrl: 'https://github.com/Aitor-Mont/Dashcapital'
     },
     {
@@ -38,15 +38,15 @@ const Portfolio: React.FC = () => {
       stack: ['Angular', 'TypeScript', 'Spring Boot', 'Java', 'PostgreSQL', 'Redis'],
       img: '/archivos/Kinetic.png',
       images: ['/archivos/Kinetic.png', '/archivos/kinetic2.png'],
-      demoUrl: '#',
+      demoUrl: 'https://kinetic-4e892.web.app/',
       repoUrl: 'https://github.com/Aitor-Mont/Kinetic'
     },
     {
       category: 'E-Commerce',
       title: 'E-Commerce Full Stack "Gameflow"',
       desc: 'Tienda de gaming y streaming con pasarela de pagos segura, gestión de inventario y panel de administración.',
-      longDesc: 'Una solución integral de comercio electrónico diseñada específicamente para el mercado de gaming. Incluye un motor de búsqueda avanzado con filtros dinámicos, un sistema de perfiles de usuario con historial de compras, y una integración completa con Stripe para pagos seguros. El panel de administración permite la gestión total del inventario, carga de claves digitales y analíticas de ventas detalladas por región. Utiliza una arquitectura MERN escalable con autenticación JWT.',
-      stack: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe API', 'JWT'],
+      longDesc: 'Una solución integral de comercio electrónico diseñada específicamente para el mercado de gaming y streaming. Incluye un motor de búsqueda avanzado con filtros dinámicos, un sistema de perfiles de usuario con historial de compras, y una integración completa con Stripe para pagos seguros. El panel de administración permite la gestión total del inventario, carga de claves digitales y analíticas de ventas detalladas por región. Aplicación headless que aprovecha la arquitectura light backend de Shoify',
+      stack: ['React', 'Node.js', 'Express', 'Shopify headless'],
       img: '/archivos/gameflow.png',
       images: ['/archivos/gameflow.png', '/archivos/gameflow2.png'],
       demoUrl: 'https://gameflow-b325f.web.app',
