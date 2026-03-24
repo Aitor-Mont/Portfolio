@@ -312,6 +312,8 @@ const Portfolio: React.FC = () => {
                   {selectedProject.demoUrl && (
                     <a
                       href={selectedProject.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 h-14 bg-primary hover:bg-blue-600 transition-all rounded-xl font-black text-white shadow-xl shadow-primary/20"
                     >
                       <span className="material-symbols-outlined">open_in_new</span>

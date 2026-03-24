@@ -40,6 +40,8 @@ const Navbar: React.FC = () => {
           <a
             href="/archivos/Curriculum_Full_Stack.pdf"
             download="Curriculum_Full_Stack.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center rounded-full h-11 px-7 bg-primary hover:bg-blue-600 transition-all duration-300 text-white text-sm font-black shadow-xl shadow-primary/40 hover:shadow-2xl hover:shadow-primary/50 hover:-translate-y-1 active:scale-95"
           >
             Descargar CV
@@ -72,6 +74,8 @@ const Navbar: React.FC = () => {
           <a
             href="/archivos/Curriculum_Full_Stack.pdf"
             download="Curriculum_Full_Stack.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full mt-4 flex items-center justify-center rounded-xl h-14 bg-primary text-white font-black shadow-xl shadow-primary/30 active:scale-95 transition-all"
           >
             Descargar CV
