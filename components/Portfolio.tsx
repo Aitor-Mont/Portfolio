@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
       stack: ['Angular', 'TypeScript', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
       img: '/archivos/dash1.png',
       images: ['/archivos/dash1.png', '/archivos/dash2.png', '/archivos/dash3.png', '/archivos/dash4.png'],
-      demoUrl: 'https://dashcapital-fc9cf.web.app',
+      demoUrl: 'https://dashcapital-fc9cf.web.app/login',
       repoUrl: 'https://github.com/Aitor-Mont/Dashcapital'
     },
     {
