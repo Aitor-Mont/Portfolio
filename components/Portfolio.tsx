@@ -23,7 +23,7 @@ const Portfolio: React.FC = () => {
       category: 'Fintech',
       title: 'Dashboard Analítico Financiero "Dashcapital"',
       desc: 'Plataforma para visualización de datos financieros en tiempo real con gráficos interactivos y reportes automatizados.',
-      longDesc: 'Este proyecto fue desarrollado para una firma de inversión líder. Permite a los analistas realizar seguimientos exhaustivos de carteras, con integración de APIs de mercado en tiempo real. Implementamos WebSockets para actualizaciones vivas y una arquitectura de microservicios en el backend para manejar grandes volúmenes de transacciones con latencia mínima. La interfaz utiliza D3.js para visualizaciones complejas y Angular para una gestión de estado eficiente.',
+      longDesc: 'Este proyecto permite a los analistas realizar seguimientos exhaustivos de carteras, con integración de APIs de mercado en tiempo real. Implementamos WebSockets para actualizaciones vivas y una arquitectura de microservicios en el backend para manejar grandes volúmenes de transacciones con latencia mínima. La interfaz utiliza D3.js para visualizaciones complejas y Angular para una gestión de estado eficiente.',
       stack: ['Angular', 'TypeScript', 'D3.js', 'Java', 'Spring Boot', 'PostgreSQL', 'WebSockets'],
       img: '/archivos/dash1.png',
       images: ['/archivos/dash1.png', '/archivos/dash2.png', '/archivos/dash3.png', '/archivos/dash4.png'],
